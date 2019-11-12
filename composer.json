@@ -1,0 +1,53 @@
+{
+    "name": "masterix21/laravel-tags",
+    "description": "Add tags to any Laravel Eloquent Model",
+    "keywords": [
+        "masterix21",
+        "laravel-tags"
+    ],
+    "homepage": "https://github.com/masterix21/laravel-tags",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Luca Longo",
+            "email": "l.longo@ambita.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Masterix21\\LaravelTags\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Masterix21\\LaravelTags\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Masterix21\\LaravelTags\\LaravelTagsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTags": "Masterix21\\LaravelTags\\LaravelTagsFacade"
+            }
+        }
+    }
+}
